@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Lato:wght@300;400;700&display=swap");
+
 * {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.c2b475c {
+  color: #2b475c;
+}
+
+//navy blue button with hover
+.nav-w {
+  background-color: #617685;
+  border-radius: 9999px;
+  width: 142px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease all;
+
+  &:hover {
+    background-color: #78a2c4;
+  }
 }
