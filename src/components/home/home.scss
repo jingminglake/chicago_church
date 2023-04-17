@@ -1,7 +1,7 @@
 .home-top {
   width: 100%;
   background-size: cover;
-  background-position: 10%;
+  background-position: 0 45%;
 }
 
 .home-qw {
@@ -21,6 +21,77 @@
 
 .home-w {
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 500;
   color: white;
+}
+
+.home-we {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.home-wer {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-f22c28 {
+  color: #2b475c;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 47px 0 48px 0;
+}
+
+.home-f22nb {
+  color: #2b475c;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.home-wewh {
+  color: white;
+  margin-top: 44px;
+}
+
+.home-weimg {
+  height: 434px;
+  background-size: cover;
+  background-position: center;
+  width: 60%;
+}
+
+.home-hea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 33px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.home-rw {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.home-rwch {
+  color: #2b2b2b;
+  font-size: 34px;
+  width: 33.33%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-rwchin {
+  max-width: 70%;
+  text-align: center;
+  line-height: 40px;
+  font-family: "Lato", sans-serif;
 }
