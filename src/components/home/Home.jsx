@@ -18,11 +18,15 @@ const Home = () => {
 
       <div className='home-we'>
         <div className='home-wer'>
-          <div className='home-f22c28'>JOIN US IN EVANSTON!</div>
-          <div className='home-f22nb'>11 AM - Worship & Communion</div>
-          <div className='home-f22nb'>11:45 PM - The Word</div>
-          <div className='home-f22nb'>12:15 PM - Lunch</div>
-          <div className='home-f22nb'>1:00 - Hangout / Outing</div>
+          <div className='home-f22c28'>JOIN US IN BRIDGEPORT!</div>
+
+          <div className='home-f22nb'>Sunday 4 PM</div>
+          <div className='home-f22nb'>Worship & Communion</div>
+
+          <div className='home-f22nb' style={{ marginTop: "10px" }}>
+            301 W 31st St
+          </div>
+          <div className='home-f22nb'>Chicago, IL 60616</div>
 
           <div className='nav-w home-wewh'>CONNECT</div>
         </div>
