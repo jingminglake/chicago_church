@@ -1,3 +1,7 @@
+.home-s {
+  box-shadow: 0 5px 5px #ccc;
+}
+
 .home-top {
   width: 100%;
   background-size: cover;
@@ -17,25 +21,52 @@
   font-size: 60px;
   font-weight: 700;
   color: white;
+  @media only screen and (max-width: 600px) {
+    font-size: 35px;
+  }
 }
 
 .home-w {
   font-size: 44px;
   font-weight: 500;
   color: white;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 22px;
+  }
 }
 
 .home-we {
   display: flex;
-  flex-direction: row;
   width: 100%;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
 }
 
 .home-wer {
   flex-grow: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.home-qz {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  padding: 50px 0 45px;
+}
+
+.home-a {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .home-f22c28 {
@@ -43,6 +74,11 @@
   font-size: 22px;
   font-weight: bold;
   margin: 47px 0 48px 0;
+  text-align: center;
+}
+
+.home-t {
+  padding: 0 10px;
 }
 
 .home-f22nb {
@@ -55,6 +91,7 @@
 .home-wewh {
   color: white;
   margin-top: 44px;
+  font-size: 16px;
 }
 
 .home-weimg {
@@ -62,13 +99,17 @@
   background-size: cover;
   background-position: center;
   width: 60%;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .home-hea {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 32px 0 33px 0;
+  margin: 50px 0 33px 0;
   font-size: 22px;
   font-weight: bold;
 }
@@ -77,16 +118,29 @@
   display: flex;
   width: 100%;
   justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+  }
 }
 
 .home-rwch {
   color: #2b2b2b;
-  font-size: 34px;
+  font-size: 24px;
   width: 33.33%;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+  }
 }
 
 .home-rwchin {
@@ -94,4 +148,24 @@
   text-align: center;
   line-height: 40px;
   font-family: "Lato", sans-serif;
+}
+
+.home-bge8 {
+  background-color: #e8e6e6;
+}
+
+.home-divider {
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  margin: 40px auto;
+}
+
+.home-mailto {
+  color: black;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

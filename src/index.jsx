@@ -6,6 +6,7 @@ import "./index.scss";
 
 import Home from "./components/home/Home";
 import Nav from "./components/nav/Nav";
+import Footer from "./components/footer/Footer";
 
 ReactDOM.createRoot(document.getElementById("app")).render(
   <>
@@ -15,6 +16,8 @@ ReactDOM.createRoot(document.getElementById("app")).render(
         <Routes>
           <Route exact path='/' element={<Home />} />
         </Routes>
+
+        <Footer />
       </BrowserRouter>
     </React.StrictMode>
   </>

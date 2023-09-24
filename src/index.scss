@@ -4,6 +4,16 @@
 * {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.text-ac {
+  text-align: center;
 }
 
 .pointer {
@@ -28,4 +38,8 @@
   &:hover {
     background-color: #78a2c4;
   }
+}
+
+.grow {
+  flex-grow: 1;
 }

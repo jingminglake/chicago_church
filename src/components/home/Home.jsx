@@ -4,7 +4,7 @@ import "./home.scss";
 
 const Home = () => {
   return (
-    <div>
+    <div className='home-s'>
       <div
         style={{ backgroundImage: `url(${"/assets/home/top.jpeg"})` }}
         className='home-top'
@@ -16,19 +16,29 @@ const Home = () => {
         </div>
       </div>
 
-      <div className='home-we'>
+      <section className='home-we'>
         <div className='home-wer'>
-          <div className='home-f22c28'>JOIN US IN BRIDGEPORT!</div>
+          <div className='home-qz'>
+            <div className='home-f22c28 text-ac' style={{ marginTop: "0" }}>
+              JOIN US IN BRIDGEPORT!
+            </div>
 
-          <div className='home-f22nb'>Sunday 4 PM</div>
-          <div className='home-f22nb'>Worship & Communion</div>
+            <div className='home-f22nb text-ac'>Sunday 4 PM</div>
+            <div className='home-f22nb text-ac'>Worship & Communion</div>
 
-          <div className='home-f22nb' style={{ marginTop: "10px" }}>
-            301 W 31st St
+            <a
+              className='home-f22nb text-ac home-a'
+              style={{ marginTop: "10px" }}
+              href={`https://www.google.com/maps/dir/?api=1&destination=${"301 W 31st St Chicago, IL 60616"}`}
+              target='_blank'
+              rel='noreferrer'
+            >
+              301 W 31st St <br />
+              Chicago, IL 60616
+            </a>
+
+            <div className='nav-w home-wewh pointer'>CONNECT</div>
           </div>
-          <div className='home-f22nb'>Chicago, IL 60616</div>
-
-          <div className='nav-w home-wewh'>CONNECT</div>
         </div>
         <div
           className='home-weimg'
@@ -36,11 +46,11 @@ const Home = () => {
             backgroundImage: `url(/assets/home/986929_3d6a116bdd33417c99e2fa0ef76180af_mv2.webp)`,
           }}
         ></div>
-      </div>
+      </section>
 
       <div className='home-hea c2b475c'>OUR HEART & MISSION</div>
 
-      <div className='home-rw'>
+      <section className='home-rw' style={{ marginBottom: "50px" }}>
         <div className='home-rwch'>
           <div className='home-rwchin'>
             To see lives changed by Jesus Christ through the Word of God and the
@@ -58,7 +68,39 @@ const Home = () => {
             the nations
           </div>
         </div>
-      </div>
+      </section>
+
+      <section className='home-we'>
+        <div className='home-wer home-bge8'>
+          <div className='home-qz'>
+            <div className='home-f22c28 text-ac' style={{ margin: 0 }}>
+              Interested in Bible study?
+            </div>
+
+            <div className='home-divider' />
+
+            <div className='home-f22nb text-ac'>
+              Meet 1-on-1 or in a small group to
+              <br /> explore the Christian faith and <br />
+              dive deeper into the Bible
+            </div>
+
+            <div className='text-ac home-f22nb' style={{ marginTop: "15px" }}>
+              Contact us at{" "}
+              <a href='mailto:exampleemail@gmail.com' className='home-mailto'>
+                exampleemail@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className='home-weimg'
+          style={{
+            backgroundImage:
+              "url(/assets/home/487147_3fb21a460ea840f08b896c1b6839e9e8mv2.png)",
+          }}
+        ></div>
+      </section>
     </div>
   );
 };
