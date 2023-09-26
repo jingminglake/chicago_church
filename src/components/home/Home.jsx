@@ -87,8 +87,11 @@ const Home = () => {
 
             <div className='text-ac home-f22nb' style={{ marginTop: "15px" }}>
               Contact us at{" "}
-              <a href='mailto:exampleemail@gmail.com' className='home-mailto'>
-                exampleemail@gmail.com
+              <a
+                href='mailto:cn.churchofthechicagoans@gmail.com'
+                className='home-mailto'
+              >
+                cn.churchofthechicagoans@gmail.com
               </a>
             </div>
           </div>

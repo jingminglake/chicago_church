@@ -3,6 +3,7 @@ import React from "react";
 import "./footer.scss";
 import { Address } from "./svg/Address";
 import Email from "./svg/Email";
+import Phone from "./svg/Phone";
 
 const Footer = () => {
   return (
@@ -19,10 +20,18 @@ const Footer = () => {
         <div className='footer-divider' />
 
         <div className='footer-con footer-bot'>
-          <a className='footer-r' href='mailto:exampleemail@gmail.com'>
+          <a
+            className='footer-r'
+            href='mailto:cn.churchofthechicagoans@gmail.com'
+          >
             <Email />
-            <div className='footer-rc'>exampleemail@gmail.com</div>
+            <div className='footer-rc'>cn.churchofthechicagoans@gmail.com</div>
           </a>
+
+          <div className='footer-r'>
+            <Phone />
+            <div className='footer-rc'>732-310-2214</div>
+          </div>
 
           <a
             className='footer-r'
