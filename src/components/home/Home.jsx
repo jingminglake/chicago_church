@@ -48,7 +48,7 @@ const Home = () => {
         ></div>
       </section>
 
-      <div className='home-hea c2b475c'>我们的目标和使命</div>
+      <div className='home-hea c2b475c'>我们所相信的</div>
 
       <section className='home-rw' style={{ marginBottom: "50px" }}>
         <div className='home-rwch'>
