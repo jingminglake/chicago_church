@@ -48,24 +48,22 @@ const Home = () => {
         ></div>
       </section>
 
-      <div className='home-hea c2b475c'>OUR HEART & MISSION</div>
+      <div className='home-hea c2b475c'>我们的目标和使命</div>
 
       <section className='home-rw' style={{ marginBottom: "50px" }}>
         <div className='home-rwch'>
           <div className='home-rwchin'>
-            To see lives changed by Jesus Christ through the Word of God and the
-            Holy Spirit
+            “等到圣灵从上浇灌我们，旷野就变为肥田，肥田看如树林。” —— 以赛亚书 32:15
           </div>
         </div>
         <div className='home-rwch'>
           <div className='home-rwchin'>
-            To love God and people, and help others to do the same
+            “神爱我们的心，我们也知道也信。神就是爱；住在爱里面的，就是住在神里面，神也住在他里面。” —— 约翰一书 4:16
           </div>
         </div>
         <div className='home-rwch'>
           <div className='home-rwchin'>
-            To participate in Jesus's Great Commission to make disciples of all
-            the nations
+            “既在十字架上灭了冤仇，便藉这十字架使两下归为一体，与神和好了，并且来传和平的福音给你们远处的人，也给那近处的人。” —— 以弗所书 2:16-17
           </div>
         </div>
       </section>
