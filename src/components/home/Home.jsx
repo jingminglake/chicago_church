@@ -53,17 +53,17 @@ const Home = () => {
       <section className='home-rw' style={{ marginBottom: "50px" }}>
         <div className='home-rwch'>
           <div className='home-rwchin'>
-            “等到圣灵从上浇灌我们，旷野就变为肥田，肥田看如树林。” —— 以赛亚书 32:15
+            “等到圣灵从上浇灌我们，旷野就变为肥田，肥田看如树林。” — 以赛亚书 32:15
           </div>
         </div>
         <div className='home-rwch'>
           <div className='home-rwchin'>
-            “神爱我们的心，我们也知道也信。神就是爱；住在爱里面的，就是住在神里面，神也住在他里面。” —— 约翰一书 4:16
+            “神爱我们的心，我们也知道也信。神就是爱；住在爱里面的，就是住在神里面，神也住在他里面。” — 约翰一书 4:16
           </div>
         </div>
         <div className='home-rwch'>
           <div className='home-rwchin'>
-            “既在十字架上灭了冤仇，便藉这十字架使两下归为一体，与神和好了，并且来传和平的福音给你们远处的人，也给那近处的人。” —— 以弗所书 2:16-17
+            “既在十字架上灭了冤仇，便藉这十字架使两下归为一体，与神和好了，并且来传和平的福音给你们远处的人，也给那近处的人。” — 以弗所书 2:16-17
           </div>
         </div>
       </section>
