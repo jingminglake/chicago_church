@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Blog from "./blog/Blog";
 
 import "./home.scss";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className='home-s'>
       <div
@@ -15,6 +20,8 @@ const Home = () => {
           <div className='home-w'>and making Him known</div>
         </div>
       </div>
+
+      <Blog />
 
       <section className='home-we'>
         <div className='home-wer'>
