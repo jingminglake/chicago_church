@@ -12,6 +12,12 @@ a {
   color: black;
 }
 
+pre {
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  font-family: inherit;
+}
+
 .text-ac {
   text-align: center;
 }

@@ -14,10 +14,11 @@ Much did had call new drew that kept. Limits expect wonder law she. Now has you 
 `,
     author: "Wei Di",
     date: "September 29, 2023",
+    img: "/assets/home/487147_3fb21a460ea840f08b896c1b6839e9e8mv2.png",
   },
 
   {
-    id: 1,
+    id: 2,
     title: "Pumpkin Patch Meetup @7",
     body: `RANDOM TEXT
     
@@ -31,10 +32,11 @@ Much did had call new drew that kept. Limits expect wonder law she. Now has you 
 `,
     author: "Wei Di",
     date: "September 29, 2023",
+    img: "/assets/home/487147_3fb21a460ea840f08b896c1b6839e9e8mv2.png",
   },
 
   {
-    id: 1,
+    id: 3,
     title: "Pumpkin Patch Meetup @7",
     body: `RANDOM TEXT
     
@@ -48,10 +50,11 @@ Much did had call new drew that kept. Limits expect wonder law she. Now has you 
 `,
     author: "Wei Di",
     date: "September 29, 2023",
+    img: "/assets/home/487147_3fb21a460ea840f08b896c1b6839e9e8mv2.png",
   },
 
   {
-    id: 1,
+    id: 4,
     title: "Pumpkin Patch Meetup @7",
     body: `RANDOM TEXT
     
@@ -65,6 +68,7 @@ Much did had call new drew that kept. Limits expect wonder law she. Now has you 
 `,
     author: "Wei Di",
     date: "September 29, 2023",
+    img: "/assets/home/487147_3fb21a460ea840f08b896c1b6839e9e8mv2.png",
   },
 ];
 

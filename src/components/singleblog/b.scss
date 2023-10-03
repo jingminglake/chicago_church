@@ -1,0 +1,25 @@
+.b-parent {
+  min-height: 100vh;
+}
+
+.b-inner {
+  padding: 30px 30px 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.b-title {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.b-by {
+  margin-top: 5px;
+}
+
+.b-body {
+  margin-top: 15px;
+  line-height: 27px;
+}

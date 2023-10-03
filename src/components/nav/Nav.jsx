@@ -10,9 +10,9 @@ const Nav = () => {
     <div className='nav-parent'>
       <div className='nav-inner'>
         {/* <div className='nav-left'> */}
-        {/* <div className='nav-m pointer' onClick={() => nav("/")}> */}
-        <img src='/assets/nav/mainlogo.webp' className='nav-img' />
-        {/* </div> */}
+        <div className='nav-m pointer' onClick={() => nav("/")}>
+          <img src='/assets/nav/mainlogo.webp' className='nav-img' />
+        </div>
         {/* </div> */}
         {/* <div className='nav-right'>
           <div className='nav-q nav-wh' onClick={() => nav("/")}>
