@@ -49,3 +49,9 @@ pre {
 .grow {
   flex-grow: 1;
 }
+
+.ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

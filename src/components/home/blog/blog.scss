@@ -6,11 +6,14 @@
 
 .blog-inner {
   padding: 30px;
-  display: flex;
-  align-items: center;
-  overflow-x: scroll;
   position: relative;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  white-space: nowrap;
+  display: grid;
+  grid-auto-flow: column;
+  //   scroll-snap-type: inline mandatory;
+  //   scroll-snap-align: start;
 
   & > div:first-child {
     margin: 0 30px 0 0px;
@@ -19,6 +22,16 @@
   & > div:last-child {
     margin: 0 0 0 30px;
   }
+
+  @media only screen and (max-width: 700px) {
+    overflow-x: scroll;
+  }
+}
+
+.blog-mq {
+  display: inline-block;
+  overflow: visible;
+  margin: 0 30px;
 }
 
 .blog-mapcon {
@@ -34,15 +47,20 @@
 
 .blog-map {
   border: 1px solid #00000026;
-  margin: 0 30px;
   padding: 20px;
   box-shadow: 0 0 20px #00000026;
   cursor: pointer;
   transition: 0.3s ease all;
-  min-width: 350px;
+  width: 450px;
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
 
   @media only screen and (max-width: 500px) {
-    min-width: 300px;
+    width: 370px;
+    height: 325px;
   }
 
   &:hover {
@@ -55,7 +73,24 @@
 }
 
 .blog-img {
-  max-width: 100%;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.blog-imgcon {
+  width: 400px;
+  height: 260px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 500px) {
+    width: 310px;
+    height: 260px;
+  }
 }
 
 .blog-title {

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./blog.scss";
@@ -8,16 +9,22 @@ import { blogs } from "./blogs";
 const Blog = () => {
   const nav = useNavigate();
 
-  function goLeft() {
-    const c = $(".blog-inner");
+  const ref = useRef();
 
-    c.scrollLeft(c.scrollLeft() - 180);
+  function goLeft() {
+    // const c = $(".blog-inner");
+
+    // c.scrollLeft(c.scrollLeft() - 400);
+
+    ref.current.scrollLeft -= 420;
   }
 
   function goRight() {
-    const c = $(".blog-inner");
+    // const c = $(".blog-inner");
 
-    c.scrollLeft(c.scrollLeft() + 180);
+    // c.scrollLeft(c.scrollLeft() + 400);
+
+    ref.current.scrollLeft += 420;
   }
 
   return (
@@ -36,19 +43,24 @@ const Blog = () => {
             <div className='blog-arrow' />
           </div>
         </div>
-        <div className='blog-inner'>
+        <div className='blog-inner' ref={ref}>
           {/* <div className='blog-mapcon'> */}
-          {blogs.map((v) => (
-            <div className='blog-map' onClick={() => nav(`/blog/${v.id}`)}>
-              <img
-                src='/assets/home/487147_3fb21a460ea840f08b896c1b6839e9e8mv2.png'
-                className='blog-img'
-              />
-              <div className='blog-title blog-a'>{v.title}</div>
-              <div className='blog-b blog-a'>By: {v.author}</div>
-              <div className='blog-c blog-a'>{v.date}</div>
-            </div>
-          ))}
+          {blogs
+            .slice()
+            .reverse()
+            .map((v) => (
+              <div className='blog-mq'>
+                <div className='blog-map' onClick={() => nav(`/blog/${v.id}`)}>
+                  <div className='blog-imgcon'>
+                    <img src={v.img} className='blog-img' />
+                  </div>
+
+                  <div className='blog-title blog-a ellipsis'>{v.title}</div>
+                  <div className='blog-b blog-a ellipsis'>By: {v.author}</div>
+                  <div className='blog-c blog-a ellipsis'>{v.date}</div>
+                </div>
+              </div>
+            ))}
           {/* </div> */}
         </div>
       </div>
