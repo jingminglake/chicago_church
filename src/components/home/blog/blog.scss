@@ -5,33 +5,50 @@
 }
 
 .blog-inner {
-  padding: 30px;
-  position: relative;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  white-space: nowrap;
+  //   padding: 30px;
+  //   position: relative;
+  //   scroll-behavior: smooth;
+  //   overflow-x: hidden;
+  //   white-space: nowrap;
+  //   display: flex;
+  //   flex-wrap: nowrap;
+  //   //   display: grid;
+  //   //   grid-auto-flow: column;
+  //   //   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  //   //   gap: 30px;
+  //   //   scroll-snap-type: inline mandatory;
+  //   //   scroll-snap-align: start;
+
+  scroll-snap-type: inline mandatory;
   display: grid;
+  gap: 30px; //c later
   grid-auto-flow: column;
-  //   scroll-snap-type: inline mandatory;
-  //   scroll-snap-align: start;
+  grid-auto-columns: 450px;
+  scroll-behavior: smooth;
+  padding: 50px 30px;
+  overflow-x: hidden;
+  overscroll-behavior-inline: contain;
+  width: 95%;
+  box-sizing: border-box;
+  z-index: 2;
 
-  & > div:first-child {
-    margin: 0 30px 0 0px;
-  }
+  //   & > div:first-child {
+  //     margin: 0 30px 0 0px;
+  //   }
 
-  & > div:last-child {
-    margin: 0 0 0 30px;
-  }
+  //   & > div:last-child {
+  //     margin: 0 0 0 30px;
+  //   }
 
   @media only screen and (max-width: 700px) {
     overflow-x: scroll;
+    grid-auto-columns: 350px;
   }
 }
 
 .blog-mq {
   display: inline-block;
   overflow: visible;
-  margin: 0 30px;
 }
 
 .blog-mapcon {
@@ -51,17 +68,18 @@
   box-shadow: 0 0 20px #00000026;
   cursor: pointer;
   transition: 0.3s ease all;
-  width: 450px;
-  height: 400px;
+  //   width: 450px;
+  //   height: 400px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
+  scroll-snap-align: start;
 
-  @media only screen and (max-width: 500px) {
-    width: 370px;
-    height: 325px;
-  }
+  //   @media only screen and (max-width: 500px) {
+  //     width: 370px;
+  //     height: 325px;
+  //   }
 
   &:hover {
     transform: scale(1.1);
@@ -79,7 +97,6 @@
 }
 
 .blog-imgcon {
-  width: 400px;
   height: 260px;
   overflow: hidden;
   display: flex;
@@ -87,10 +104,10 @@
   align-items: center;
   margin: 0 auto;
 
-  @media only screen and (max-width: 500px) {
-    width: 310px;
-    height: 260px;
-  }
+  //   @media only screen and (max-width: 500px) {
+  //     width: 310px;
+  //     height: 260px;
+  //   }
 }
 
 .blog-title {
@@ -181,6 +198,8 @@
 
 .blog-p {
   position: relative;
+  display: flex;
+  justify-content: center;
 
   &:hover {
     > .blog-ab > .blog-t {
