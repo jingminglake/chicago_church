@@ -69,7 +69,7 @@ const blogs = [
         23 从神那里来的恶魔临到扫罗身上的时候，大卫就拿琴，用手而弹，扫罗便舒畅爽快，恶魔离了他。
         撒母耳上16:14-23–1Samuel16:14-23
   `,
-    author: "Tang han",
+    author: "Tang Han",
     date: "September 29, 2023",
     img: "/assets/blog/piano_gospel.PNG",
   },
