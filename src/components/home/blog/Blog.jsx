@@ -15,7 +15,7 @@ const Blog = () => {
     // const c = $(".blog-inner");
 
     // c.scrollLeft(c.scrollLeft() - 400);
-
+    //test
     ref.current.scrollLeft -= 420;
   }
 
