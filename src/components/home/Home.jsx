@@ -11,13 +11,14 @@ const Home = () => {
   return (
     <div className='home-s'>
       <div
-        style={{ backgroundImage: `url(${"/assets/home/top.jpeg"})` }}
+        style={{ backgroundImage: `url(${"/assets/home/top.webp"})` }}
         className='home-top'
       >
+      
         <div className='home-qw'>
-          <div className='home-q'>KNOWING CHRIST</div>
+          <div className='home-q'>认识基督</div>
 
-          <div className='home-w'>and making Him known</div>
+          <div className='home-w'>享受祂的丰富</div>
         </div>
       </div>
 

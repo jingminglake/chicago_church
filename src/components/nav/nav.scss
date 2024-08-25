@@ -3,37 +3,42 @@
   position: fixed;
   left: 0;
   top: 0;
-  height: 115px;
-  background-color: rgba(0, 0, 0, 0.25);
+  height: 100px;
+  background-color: white;
   z-index: 100000;
+
+  box-sizing: border-box;
+  border: 5px solid red;
 
   @media only screen and (max-width: 500px) {
     height: 90px;
   }
 }
 
-.nav-inner {
-  display: flex;
-  flex-direction: row;
+/*.nav-inner {
+  display: block;
   align-items: center;
+  justify-content: center;
+  margin: auto;
   height: 100%;
-  width: 100%;
+  width: 90%;
+
+  overflow: visible;
+  border-style: solid;
+  border-color: red;
+}*/
+
+.nav-frame {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 95%;
+  height: 45%;
 }
 
-.nav-left {
-  width: 30%;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-right {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
+/*
 .nav-m {
   width: 279px;
   height: 70px;
@@ -56,7 +61,7 @@
 }
 
 .nav-wh {
-  color: white;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,11 +70,58 @@
     color: #c7c7c7;
   }
 }
+*/
 
-.nav-img {
-  margin-top: 8px;
-  @media only screen and (max-width: 500px) {
-    width: 200px;
-    height: 53px;
+.topnav {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.topnav img {
+  //float: center;
+  max-width: 50%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: contain;
+  @media only screen and (max-width: 600px) {
+    max-width: 60%;
+  }
+}
+
+.topnav a {
+  display: flex;
+  color: white;
+  font-size: 20px;
+  padding: 0 2%;
+
+  @media only screen and (max-width: 600px) {
+    padding: 1%;
+    font-size: 14px;
+  }
+}
+
+.topnav a:hover {
+  color: #d9d9d9;
+}
+
+.topnav a.active {
+  color: #d9d9d9;
+}
+
+.topnav a.box {
+  background-color: #617685;
+  border-radius: 9999px;
+  width: 5%;
+  height: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease all;
+
+  &:hover {
+    background-color: #78a2c4;
   }
 }

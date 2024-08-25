@@ -30,7 +30,7 @@ const Blog = () => {
   return (
     <section className='blog-parent'>
       <div className='home-f22c28' style={{ margin: "15px 0" }}>
-        Events and News
+        活动与信息
       </div>
 
       <div className='blog-p'>
@@ -56,7 +56,7 @@ const Blog = () => {
                   </div>
 
                   <div className='blog-title blog-a ellipsis'>{v.title}</div>
-                  <div className='blog-b blog-a ellipsis'>By: {v.author}</div>
+                  <div className='blog-b blog-a ellipsis'>联系人: {v.author}</div>
                   <div className='blog-c blog-a ellipsis'>{v.date}</div>
                 </div>
               </div>
