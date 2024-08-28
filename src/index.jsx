@@ -9,23 +9,23 @@ import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
 import SingleBlog from "./components/singleblog/SingleBlog";
 import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
 
 ReactDOM.createRoot(document.getElementById("app")).render(
   <>
     <React.StrictMode>
       <BrowserRouter>
-        <Nav />
-        <div style={{
-          marginTop:'100px',
-        }}>
+        <Nav/>
+
         <Routes>
 
           <Route exact path='/' element={<Home />} />
           <Route exact path='/blog/:id' element={<SingleBlog />} />
           <Route exact path='/about' element={<About />} />
+          <Route exact path='/contact' element={<Contact />} />
 
         </Routes>
-        </div>
+
         <Footer />
       </BrowserRouter>
     </React.StrictMode>
