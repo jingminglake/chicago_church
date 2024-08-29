@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react'
+import React, {useEffect} from 'react';
+import "./about.scss";
 
 const About = () => {
   useEffect(() => {
@@ -8,9 +9,7 @@ const About = () => {
   return (
     <div className="about-frame"> 
       <div
-        style={{ backgroundImage: `url(${"/assets/home/top.webp"})` }}
-        opacity={0.5}
-        className='home-top'
+        
       >
 
       <div>Test</div>
