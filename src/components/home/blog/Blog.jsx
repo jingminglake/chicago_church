@@ -56,7 +56,9 @@ const Blog = () => {
                   </div>
 
                   <div className='blog-title blog-a ellipsis'>{v.title}</div>
-                  <div className='blog-b blog-a ellipsis'>联系人: {v.author}</div>
+                  <div className='blog-b blog-a ellipsis'>
+                    联系人: {v.author}
+                  </div>
                   <div className='blog-c blog-a ellipsis'>{v.date}</div>
                 </div>
               </div>

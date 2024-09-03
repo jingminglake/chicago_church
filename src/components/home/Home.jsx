@@ -1,9 +1,33 @@
-import React, { useEffect } from "react";
-import Blog from "./blog/Blog";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 import "./home.scss";
+import { blogs } from "./blog/blogs";
+
+//components
+import Blog from "./blog/Blog";
+import SingleBlog from "../singleblog/SingleBlog";
 
 const Home = () => {
+  const params = useParams();
+
+  const [blogState, setBlogState] = useState({ display: false });
+
+  useEffect(() => {
+    const blogid = params.blogid;
+
+    if (blogid) {
+      setBlogState({
+        display: true,
+        // blog: blogs.find((t) => t.id === blogid),
+      });
+    } else {
+      setBlogState({ display: false });
+    }
+  }, [window.location.href]);
+
+  console.log("blog", blogState);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -14,7 +38,6 @@ const Home = () => {
         style={{ backgroundImage: `url(${"/assets/home/top.webp"})` }}
         className='home-top'
       >
-      
         <div className='home-qw'>
           <div className='home-q'>认识基督</div>
 
@@ -113,8 +136,10 @@ const Home = () => {
           }}
         ></div>
       </section>
+
+      {blogState?.display && <SingleBlog />}
     </div>
   );
 };
 
-export default Home
+export default Home;

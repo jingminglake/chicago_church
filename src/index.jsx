@@ -15,15 +15,14 @@ ReactDOM.createRoot(document.getElementById("app")).render(
   <>
     <React.StrictMode>
       <BrowserRouter>
-        <Nav/>
+        <Nav />
 
         <Routes>
-
           <Route exact path='/' element={<Home />} />
-          <Route exact path='/blog/:id' element={<SingleBlog />} />
+          <Route exact path='/blog/:blogid' element={<Home />} />
+
           <Route exact path='/about' element={<About />} />
           <Route exact path='/contact' element={<Contact />} />
-
         </Routes>
 
         <Footer />
