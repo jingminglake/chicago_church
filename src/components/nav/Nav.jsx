@@ -9,6 +9,7 @@ const Nav = () => {
 
   return (
     <nav className='topnav'>
+      <i class='fa-solid fa-bars'></i>
       {/* <img src='assets/nav/mainlogo.webp' /> */}
       <img src='assets/nav/test.png' />
 
