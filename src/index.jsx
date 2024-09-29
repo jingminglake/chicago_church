@@ -13,20 +13,22 @@ import Contact from "./components/contact/Contact";
 
 ReactDOM.createRoot(document.getElementById("app")).render(
   <>
-    <React.StrictMode>
-      <BrowserRouter>
-        <Nav />
+    <div className='index-container'>
+      <React.StrictMode>
+        <BrowserRouter>
+          <Nav />
 
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/blog/:blogid' element={<Home />} />
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/blog/:blogid' element={<Home />} />
 
-          <Route exact path='/about' element={<About />} />
-          <Route exact path='/contact' element={<Contact />} />
-        </Routes>
+            <Route exact path='/about' element={<About />} />
+            <Route exact path='/contact' element={<Contact />} />
+          </Routes>
 
-        <Footer />
-      </BrowserRouter>
-    </React.StrictMode>
+          <Footer />
+        </BrowserRouter>
+      </React.StrictMode>
+    </div>
   </>
 );

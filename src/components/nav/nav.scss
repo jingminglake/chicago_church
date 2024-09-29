@@ -1,15 +1,24 @@
 .topnav {
   background: white;
-  color:black;
+  color: black;
   display: flex;
   justify-content: space-evenly;
   align-items: stretch;
   gap: 2rem;
   padding: 0.625rem 1rem;
-  box-shadow: 0 5px 5px #ccc;
+  // box-shadow: 0 5px 5px #ccc;
 
   box-sizing: border-box;
-  border: 5px solid red;
+  // border: 5px solid red;
+
+  height: 90px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  box-shadow: 0 0 20px #00000026;
 }
 
 .topnav .site-title {
@@ -35,7 +44,7 @@
   height: auto;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .topnav li:hover {
