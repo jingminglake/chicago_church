@@ -1,31 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router";
 
 import "./nav.scss";
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const nav = useNavigate();
-  const path = window.location.pathname;
+
+  const handleLinkClick = (path) => {
+    setMenuOpen(false); // Toggle menu -> false when link is clicked
+    nav(path);
+  }
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen) // Toggle menu open/close state
+  }
 
   return (
     <nav className='topnav'>
-      <i class='fa-solid fa-bars'></i>
-      {/* <img src='assets/nav/mainlogo.webp' /> */}
-      <img src='assets/nav/test.png' />
+      <div className='logo'>
+        <img src='assets/nav/test.png' alt="Logo"/>
+      </div>
 
-      {/* <h2 className='site-title' onClick={()=> nav('/')}>The Church of the Chicagoans</h2> */}
+      <div className='hamburger'>
+        <button className='bars-button' onClick={toggleMenu}>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
 
-      {/* <div className='grow' /> */}
-      <ul>
-        <li onClick={() => nav("/")}>Home</li>
-        <li onClick={() => nav("/about")}>About</li>
+      <ul className={`links ${menuOpen ? "menu-open" : ""}`}>
+        <li onClick={() => handleLinkClick("/")}>Home</li>
+        <li onClick={() => handleLinkClick("/about")}>About</li>
         {/* <li onClick={() => nav("/about")}>Campuses</li> */}
-        <li onClick={() => nav("/about")}>Locations</li>
+        <li onClick={() => handleLinkClick("/locations")}>Locations</li>
 
-        <li onClick={() => nav("/contact")}>Contact</li>
-        {/* <li>
-          <a href='https://www.thechurchofthechicagoans.org/'>Eng Website</a>
-        </li> */}
+        <li onClick={() => handleLinkClick("/contact")}>Contact</li>
       </ul>
     </nav>
   );
