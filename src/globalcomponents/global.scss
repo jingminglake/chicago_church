@@ -10,6 +10,11 @@
   cursor: pointer;
   min-width: 100px;
 
+  //800 px is when the navbar switches to mobile view
+  @media only screen and (min-width: 800px) {
+    margin-left: 30px;
+  }
+
   @media only screen and (max-width: 400px) {
     flex: unset;
     min-width: 80px;
