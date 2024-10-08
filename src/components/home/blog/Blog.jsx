@@ -2,35 +2,31 @@ import React, { useEffect } from "react";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { useTranslation } from "react-i18next";
+
 import "./blog.scss";
 
 import { blogs } from "./blogs";
 
 const Blog = () => {
   const nav = useNavigate();
-
   const ref = useRef();
 
-  function goLeft() {
-    // const c = $(".blog-inner");
+  const { t } = useTranslation();
 
-    // c.scrollLeft(c.scrollLeft() - 400);
+  function goLeft() {
     //test
     ref.current.scrollLeft -= 420;
   }
 
   function goRight() {
-    // const c = $(".blog-inner");
-
-    // c.scrollLeft(c.scrollLeft() + 400);
-
     ref.current.scrollLeft += 420;
   }
 
   return (
     <section className='blog-parent'>
       <div className='home-f22c28' style={{ margin: "15px 0" }}>
-        活动与信息
+        {t("home.t3")}
       </div>
 
       <div className='blog-p'>

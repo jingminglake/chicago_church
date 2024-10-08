@@ -1,13 +1,29 @@
 $myColor: #228b22;
 
+.nav-inner {
+  display: flex;
+  // justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-logo img {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
 .topnav {
   background: white;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px 10%;
+
+  padding: 10px 5%;
   position: fixed;
-  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   height: 90px;
   top: 0;
@@ -16,14 +32,9 @@ $myColor: #228b22;
   z-index: 1000;
   box-shadow: 0 0 20px #00000026;
 
-  .logo img {
-    height: 55px;
-    transition: transform 0.3s ease;
-  }
-
   .hamburger {
     display: none;
-    cursor: pointer;
+
     z-index: 1000;
   }
 
@@ -48,7 +59,7 @@ $myColor: #228b22;
       }
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 0;
         height: 2px;
@@ -60,12 +71,13 @@ $myColor: #228b22;
       }
 
       &:hover::after {
-        width: 100%
+        width: 100%;
       }
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  //i changed it to 800 just so its easier number
+  @media only screen and (max-width: 800px) {
     padding: 0 5%;
     justify-content: space-between;
 
@@ -104,19 +116,21 @@ $myColor: #228b22;
 
     .hamburger {
       display: block;
-      position: absolute;
-      right: 5%;
+      min-width: 100px;
+      // position: absolute;
+      // right: 5%;
+
       .bars-button {
         display: flex;
         justify-content: center;
         align-items: center;
         background: none;
         border: none;
-        
+        cursor: pointer;
+
         i {
-          cursor: pointer;
           font-size: 20px;
-          transition: transform 0.3s ease
+          transition: transform 0.3s ease;
         }
       }
     }
