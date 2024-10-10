@@ -1,30 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { blogs } from "../home/blog/blogs";
-
 import "./b.scss";
 
-const SingleBlog = () => {
+const SingleBlog = ({ blogState, setBlogState }) => {
+  console.log(blogState, "state");
+
   const params = useParams();
   const nav = useNavigate();
 
-  const [notFound, setNotFound] = useState(false);
+  // const [notFound, setNotFound] = useState(false);
 
-  const [selectedBlog, setSelectedBlog] = useState(null);
+  // const [selectedBlog, setSelectedBlog] = useState(null);
 
-  useEffect(() => {
-    const id = params.blogid;
+  // useEffect(() => {
+  //   const id = params.blogid;
 
-    const find = blogs.find((v) => v.id === Number(id));
+  //   const find = blogs.find((v) => v.id === Number(id));
 
-    if (!find) {
-      setNotFound(true);
-      return;
-    }
+  //   if (!find) {
+  //     setNotFound(true);
+  //     return;
+  //   }
 
-    setSelectedBlog(find);
-  }, []);
+  //   setSelectedBlog(find);
+  // }, []);
 
   useEffect(() => {
     $("html").css("overflow-y", "hidden");
@@ -34,10 +34,7 @@ const SingleBlog = () => {
     };
   }, []);
 
-  if (!selectedBlog) return;
-
-  //START HERE
-  //ADD CLOSE BUTTON AND DISABLE SCROLL WHEN THE POPUP IS ACTIVE
+  // if (!blogState?.blog) return;
 
   return (
     <div
@@ -46,13 +43,15 @@ const SingleBlog = () => {
       onClick={() => nav("/")}
     >
       <div className='b-inner' onClick={(e) => e.stopPropagation()}>
-        <img src={selectedBlog.img} className='b-img' />
+        <img src={blogState.blog.img} className='b-img' />
 
-        <div className='b-title'>{selectedBlog.title}</div>
-        <div className='b-by'>By: {selectedBlog.author}</div>
+        <div className='b-title'>{blogState.blog.title}</div>
+        <div className='b-by'>By: {blogState.blog.author}</div>
 
-        <pre className='b-body'>{selectedBlog.body}</pre>
+        <pre className='b-body'>{blogState.blog.body}</pre>
       </div>
+
+      <div className='x b-x' onClick={() => setBlogState({ display: false })} />
     </div>
   );
 };

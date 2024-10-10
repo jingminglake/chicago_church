@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import { blogs } from "./blog/blogs";
+
 import "./home.scss";
 
 //components
@@ -19,9 +21,17 @@ const Home = () => {
     const blogid = params.blogid;
 
     if (blogid) {
+      const find = blogs.find((t) => t.id === Number(blogid));
+
+      if (!find) {
+        setBlogState({ display: false });
+
+        return;
+      }
+
       setBlogState({
         display: true,
-        // blog: blogs.find((t) => t.id === blogid),
+        blog: find,
       });
     } else {
       setBlogState({ display: false });
@@ -39,9 +49,11 @@ const Home = () => {
         className='home-top'
       >
         <div className='home-qw'>
-          <div className='home-q'>{t("home.t1")}</div>
+          <div className='home-qepo'>
+            <div className='home-q'>{t("home.t1")}</div>
 
-          <div className='home-w'>{t("home.t2")}</div>
+            <div className='home-w'>{t("home.t2")}</div>
+          </div>
         </div>
       </div>
 
@@ -79,17 +91,19 @@ const Home = () => {
         ></div>
       </section>
 
-      <div className='home-hea c2b475c'>{t("home.t5")}</div>
+      <section className='home-s4'>
+        <div className='home-hea c2b475c'>{t("home.t5")}</div>
 
-      <section className='home-rw' style={{ marginBottom: "50px" }}>
-        <div className='home-rwch'>
-          <div className='home-rwchin'>{t("home.p3")}</div>
-        </div>
-        <div className='home-rwch'>
-          <div className='home-rwchin'>{t("home.p4")}</div>
-        </div>
-        <div className='home-rwch'>
-          <div className='home-rwchin'>{t("home.p5")}</div>
+        <div className='home-rw'>
+          <div className='home-rwch'>
+            <div className='home-rwchin'>{t("home.p3")}</div>
+          </div>
+          <div className='home-rwch'>
+            <div className='home-rwchin'>{t("home.p4")}</div>
+          </div>
+          <div className='home-rwch'>
+            <div className='home-rwchin'>{t("home.p5")}</div>
+          </div>
         </div>
       </section>
 
@@ -128,7 +142,9 @@ const Home = () => {
         ></div>
       </section>
 
-      {blogState?.display && <SingleBlog />}
+      {blogState?.display && (
+        <SingleBlog blogState={blogState} setBlogState={setBlogState} />
+      )}
     </div>
   );
 };

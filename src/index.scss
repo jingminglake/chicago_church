@@ -7,6 +7,24 @@
   // overflow-x: hidden;
 }
 
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    height: 14px;
+    width: 14px;
+    margin: 0 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #aeaeae;
+    -webkit-border-radius: 1ex;
+    border: 3.5px solid white;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: #000;
+  }
+}
+
 ul,
 ul li {
   list-style-type: none;
@@ -67,4 +85,39 @@ pre {
 
 .boxshadow {
   box-shadow: 0 0 20px #00000026;
+}
+
+.x {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s ease all;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+    transform: rotate(-45deg);
+  }
 }

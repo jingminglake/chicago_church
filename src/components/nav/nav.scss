@@ -11,12 +11,18 @@ $myColor: #228b22;
 .nav-logo img {
   height: 55px;
   transition: transform 0.3s ease;
+
+  @media only screen and (max-width: 500px) {
+    width: 200px;
+    height: unset;
+  }
 }
 
 .nav-logo {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .topnav {
@@ -25,7 +31,7 @@ $myColor: #228b22;
   padding: 10px 5%;
   position: fixed;
   box-sizing: border-box;
-  height: 90px;
+  height: 100px;
   top: 0;
   left: 0;
   width: 100%;
@@ -78,7 +84,7 @@ $myColor: #228b22;
 
   //i changed it to 800 just so its easier number
   @media only screen and (max-width: 800px) {
-    padding: 0 5%;
+    padding: 0;
     justify-content: space-between;
 
     .links {
@@ -116,7 +122,7 @@ $myColor: #228b22;
 
     .hamburger {
       display: block;
-      min-width: 100px;
+      min-width: 80px;
       // position: absolute;
       // right: 5%;
 

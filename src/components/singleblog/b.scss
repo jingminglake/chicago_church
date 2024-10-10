@@ -4,11 +4,12 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 10;
+  z-index: 1001;
+  width: 100%;
 }
 
 .b-inner {
-  padding: 30px 30px 90px;
+  padding: 40px 90px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,6 +17,19 @@
   width: 80%;
   box-sizing: border-box;
   margin: 0 auto;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    padding: 50px 15px;
+    height: 100%;
+  }
 }
 
 .b-title {
@@ -48,7 +62,7 @@
 }
 
 .b-img {
-  max-width: 50%;
+  max-width: 70%;
 
   @media only screen and (max-width: 750px) {
     max-width: 80%;
@@ -56,5 +70,26 @@
 
   @media only screen and (max-width: 500px) {
     max-width: 95%;
+  }
+}
+
+.b-x {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+
+  @media only screen and (max-width: 700px) {
+    height: 24px;
+    width: 24px;
+
+    &:before {
+      height: 24px;
+      width: 2px;
+    }
+
+    &:after {
+      height: 24px;
+      width: 2px;
+    }
   }
 }

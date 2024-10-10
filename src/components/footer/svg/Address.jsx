@@ -12,7 +12,7 @@ export const Address = () => {
       data-type='color'
       role='presentation'
       aria-hidden='true'
-      style={{ height: "35px", width: "35px" }}
+      className='footer-sv'
     >
       <defs>
         <style>#comp-la7emoc1 svg [data-color="1"] </style>

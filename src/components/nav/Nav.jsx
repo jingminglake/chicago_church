@@ -53,8 +53,8 @@ const Nav = () => {
           </div>
         )}
 
-        <div className={`nav-logo`}>
-          <img src='assets/nav/test.png' alt='Logo' />
+        <div className={`nav-logo`} onClick={() => nav("/")}>
+          <img src='/assets/nav/test.png' alt='Logo' />
         </div>
 
         {screenWidth > 800 && <div className='grow' />}

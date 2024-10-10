@@ -8,7 +8,7 @@ const Phone = () => {
       version='1.1'
       viewBox='0 0 202.592 202.592'
       xmlSpace='preserve'
-      style={{ width: "35px", height: "35px" }}
+      className='footer-sv'
     >
       <g>
         <g>

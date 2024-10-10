@@ -74,8 +74,6 @@ const App = () => {
     };
   }, [i18n, t]);
 
-  console.log(i18n.language);
-
   return (
     <>
       <div className='index-container'>

@@ -13,7 +13,7 @@ const Email = () => {
       role='presentation'
       aria-hidden='true'
       aria-label=''
-      style={{ height: "35px", width: "35px" }}
+      className='footer-sv'
     >
       <defs>
         <style>#comp-la3gvuud svg [data-color="1"]</style>
