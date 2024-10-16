@@ -85,11 +85,19 @@
     &:before {
       height: 24px;
       width: 2px;
+
+      @media only screen and (max-width: 500px) {
+        left: 11px;
+      }
     }
 
     &:after {
       height: 24px;
       width: 2px;
+
+      @media only screen and (max-width: 500px) {
+        left: 11px;
+      }
     }
   }
 }

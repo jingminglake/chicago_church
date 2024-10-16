@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -11,17 +11,57 @@ import { blogs } from "./blogs";
 const Blog = () => {
   const nav = useNavigate();
   const ref = useRef();
+  const timerRef = useRef(null);
 
   const { t } = useTranslation();
 
   function goLeft() {
     //test
     ref.current.scrollLeft -= 420;
+
+    //reset timer
+    start();
   }
 
   function goRight() {
     ref.current.scrollLeft += 420;
+
+    //reset timer
+    start();
   }
+
+  function autoScroll() {
+    if (
+      Math.ceil($(".blog-inner").scrollLeft()) >=
+      ref.current.scrollWidth - $(".blog-inner").outerWidth()
+    ) {
+      ref.current.scrollLeft = 0;
+    } else {
+      goRight();
+    }
+  }
+
+  const start = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current); // Clear the previous interval
+    }
+    timerRef.current = setInterval(autoScroll, 5000); // Start a new interval
+  };
+
+  useEffect(() => {
+    start();
+
+    return () => clearInterval(timerRef.current);
+  }, []);
+
+  const innerscroll = useCallback(() => {
+    //reset the timer
+    start();
+  }, []);
+
+  $(".blog-inner").unbind("scroll", innerscroll).on("scroll", innerscroll);
+
+  // console.log($(".blog-inner").outerWidth(), "width");
 
   return (
     <section className='blog-parent'>
