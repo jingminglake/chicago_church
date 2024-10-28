@@ -51,6 +51,18 @@
 .footer-rc {
   margin-left: 10px;
 
+  //35 px accounts for the icon on the left
+  //10 px accounts for the margin left 10px
+  //35 + 10 = 45 px subtracted
+  max-width: calc(100% - 45px);
+
+  /* Forces long words to break */
+  word-wrap: break-word;
+  /* Alternative property for wrapping text */
+  overflow-wrap: break-word;
+  /* Ensures the text wraps within the container width */
+  white-space: normal;
+
   @media only screen and (max-width: 500px) {
     font-size: 14px;
   }
