@@ -24,7 +24,7 @@ const locations = [
     id: 1, //incremental id
     name: "South Loop",
     contacts: [5],
-    contacts: [4],
+    campus: [4],
   },
 
   {
@@ -92,13 +92,13 @@ const contacts = [
   },
 
   {
-    id: 5,
+    id: 6,
     name: "Bin Wang (Kevin Wang)",
     phone: "(312)-709-8172",
   },
 
   {
-    id: 6,
+    id: 7,
     name: "Meng Tong",
     phone: "(312)-375-5769",
   },

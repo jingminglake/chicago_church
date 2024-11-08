@@ -84,18 +84,20 @@ const Contact = () => {
                 {selectedLocation.contacts.map((t) => {
                   const cur = contacts.find((v) => v.id === Number(t));
 
+                  console.log(cur);
+
                   return (
                     <div className='contact-map-ch'>
                       {/* this image will be a photo of the person, blank placeholder for now*/}
                       <img className='contact-map-im' />
                       <div className='contact-map-info'>
                         <div className='contact-map-infoch contact-name f-s-main'>
-                          {cur.name}
-                          {/* chinese name here */}({cur.name})
+                          {cur?.name}
+                          {/* chinese name here */}({cur?.name})
                         </div>
 
                         <div className='contact-map-infoch contact-map-phone f-s-main'>
-                          {cur.phone}
+                          {cur?.phone}
                         </div>
                       </div>
                     </div>
