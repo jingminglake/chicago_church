@@ -70,6 +70,7 @@ const Contact = () => {
             setValue: (v) => {
               setSelectedLocation(v);
               window.localStorage.setItem("loc", v.id);
+              console.log("ran");
             },
             name: selectedLocation?.name,
             novalue: "Select a Location",
@@ -83,8 +84,6 @@ const Contact = () => {
               <div className='contact-ih'>
                 {selectedLocation.contacts.map((t) => {
                   const cur = contacts.find((v) => v.id === Number(t));
-
-                  console.log(cur);
 
                   return (
                     <div className='contact-map-ch'>

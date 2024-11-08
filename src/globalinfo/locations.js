@@ -7,28 +7,28 @@ const locations = [
   },
 
   {
-    id: 1, //incremental id
+    id: 2, //incremental id
     name: "Evanston",
     contacts: [3],
     campus: [2],
   },
 
   {
-    id: 1, //incremental id
+    id: 3, //incremental id
     name: "Bridgeport",
     contacts: [4],
     campus: [3],
   },
 
   {
-    id: 1, //incremental id
+    id: 4, //incremental id
     name: "South Loop",
     contacts: [5],
     campus: [4],
   },
 
   {
-    id: 1, //incremental id
+    id: 5, //incremental id
     name: "Chinatown",
     contacts: [6, 7],
   },
