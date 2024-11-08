@@ -6,7 +6,7 @@ import "./index.scss";
 import "./globalcomponents/global.scss";
 
 //redux
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { dispatchSetLanguageReadyState } from "./store/language/languageReadyState";
 import { dispatchSetScreenWidth } from "./store/global/screenWidth";
 
@@ -21,9 +21,12 @@ import Nav from "./components/nav/Nav";
 import Footer from "./components/footer/Footer";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import LoadingComponentSeeThroughBackground from "./globalcomponents/LoadingComponentSeeThroughBackground";
 
 const App = () => {
   const dispatch = useDispatch();
+
+  const loading = useSelector((state) => state.loading);
 
   const { t, i18n } = useTranslation();
 
@@ -78,6 +81,8 @@ const App = () => {
     <>
       <div className='index-container'>
         <React.StrictMode>
+          {loading && <LoadingComponentSeeThroughBackground />}
+
           <BrowserRouter>
             <Nav />
 

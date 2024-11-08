@@ -25,6 +25,9 @@ const v = async function () {
   app.use(vite.middlewares);
 };
 
+//api routes
+app.use("/api", require("./api/api.js"));
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "/dist/index.html"));
 });
